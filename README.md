@@ -3,7 +3,7 @@
 Front-end assignment: a responsive **Contact Setting** page implemented from the [Figma design](https://www.figma.com/design/m71i8XL0VoFfqpUZk2nCbo/Test-front-end?node-id=1-8738&m=dev).
 
 **Repository:** [github.com/AhmadAdnan93/epya-contact-settings](https://github.com/AhmadAdnan93/epya-contact-settings)  
-**Live demo:** [epya-contact-settings.vercel.app](https://epya-contact-settings.vercel.app) *(update this URL after deployment)*
+**Live demo:** Deploy using the [Deployment](#deployment-live-demo) steps below (Vercel / Netlify).
 
 ---
 
@@ -130,6 +130,28 @@ epya-contact-settings/
 ├── package.json
 └── vite.config.ts
 ```
+
+---
+
+## Submitting to GitHub
+
+The project is initialized with git and a structured commit history. To publish under **AhmadAdnan93**:
+
+1. Create a new **public** repository on GitHub named `epya-contact-settings` (no README — this repo already has one).
+
+2. Push from your machine:
+
+   ```bash
+   git remote add origin https://github.com/AhmadAdnan93/epya-contact-settings.git
+   git push -u origin main
+   ```
+
+   If `origin` already exists, use:
+
+   ```bash
+   git remote set-url origin https://github.com/AhmadAdnan93/epya-contact-settings.git
+   git push -u origin main
+   ```
 
 ---
 
