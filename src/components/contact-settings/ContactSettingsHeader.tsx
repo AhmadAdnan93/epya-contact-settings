@@ -1,16 +1,37 @@
-import { type CSSProperties } from "react"
 import { useTranslation } from "react-i18next"
 import { Button } from "react-bootstrap"
-import iconTotalEvents from "../../assets/stats/total-events.png"
-import iconEmail from "../../assets/stats/email.png"
-import iconSms from "../../assets/stats/sms.png"
-import iconRequest from "../../assets/stats/request.png"
 
 const stats = [
-  { key: "totalEvents", value: "22", icon: iconTotalEvents, unitKey: "totalEventsUnit", featured: false },
-  { key: "sentEmails", value: "12", icon: iconEmail, unitKey: "sentEmailsUnit", featured: false },
-  { key: "sentSms", value: "44", icon: iconSms, unitKey: "sentSmsUnit", featured: true },
-  { key: "request", value: "44", icon: iconRequest, unitKey: "requestUnit", featured: true },
+  {
+    key: "totalEvents",
+    value: "22",
+    iconModifier: "stat-card__icon-mask--total-events",
+    unitKey: "totalEventsUnit",
+    featured: false,
+  },
+  {
+    key: "sentEmails",
+    value: "12",
+    iconModifier: "stat-card__icon-mask--email",
+    unitKey: "sentEmailsUnit",
+    featured: false,
+  },
+  {
+    key: "sentSms",
+    value: "44",
+    iconModifier: "stat-card__icon-mask--sms",
+    unitKey: "sentSmsUnit",
+    featured: true,
+    iconImg: "sms",
+  },
+  {
+    key: "request",
+    value: "44",
+    iconModifier: "stat-card__icon-mask--request",
+    unitKey: "requestUnit",
+    featured: true,
+    iconImg: "request",
+  },
 ] as const
 
 export default function ContactSettingsHeader() {
@@ -52,13 +73,12 @@ export default function ContactSettingsHeader() {
               className={`stat-card__icon${stat.featured ? " stat-card__icon--featured" : ""}`}
             >
               {stat.featured ? (
-                <img className="stat-card__icon-img" src={stat.icon} alt="" width={48} height={48} />
-              ) : (
                 <span
-                  className="stat-card__icon-mask"
-                  style={{ "--icon-url": `url(${stat.icon})` } as CSSProperties}
+                  className={`stat-card__icon-img stat-card__icon-img--${stat.iconImg}`}
                   aria-hidden="true"
                 />
+              ) : (
+                <span className={`stat-card__icon-mask ${stat.iconModifier}`} aria-hidden="true" />
               )}
             </div>
           </article>

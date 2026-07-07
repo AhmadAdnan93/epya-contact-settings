@@ -1,34 +1,35 @@
-import { Fragment, type CSSProperties } from "react"
+import { Fragment } from "react"
 import { useTranslation } from "react-i18next"
 import profileAvatar from "../../assets/profile-avatar.png"
 import jordanFlag from "../../assets/jordan-flag.png"
-import iconUserSettings from "../../assets/profile-actions/user-settings.png"
-import iconSettings from "../../assets/profile-actions/settings.png"
-import iconDirections from "../../assets/profile-actions/directions.png"
-import iconChat from "../../assets/profile-actions/chat.png"
-import iconLock from "../../assets/profile-actions/lock.png"
-import iconPersonalInfo from "../../assets/profile-nav/personal-info.png"
-import iconDashboard from "../../assets/profile-nav/dashboard.png"
-import iconDocuments from "../../assets/profile-nav/documents.png"
-import iconRelatedEvents from "../../assets/profile-nav/related-events.png"
-import iconSecurityCheck from "../../assets/profile-nav/security-check.png"
-import iconFamilyTree from "../../assets/profile-nav/family-tree.png"
 
 const actionItems = [
-  { id: "user", icon: iconUserSettings, label: "User", variant: "default" },
-  { id: "settings", icon: iconSettings, label: "Settings", variant: "active" },
-  { id: "directions", icon: iconDirections, label: "Notes", variant: "default", dividerBefore: true },
-  { id: "chat", icon: iconChat, label: "Chat", variant: "default" },
-  { id: "lock", icon: iconLock, label: "Lock", variant: "purple", dividerBefore: true },
+  { id: "user", iconModifier: "profile-action-btn__icon--user", label: "User", variant: "default" },
+  { id: "settings", iconModifier: "profile-action-btn__icon--settings", label: "Settings", variant: "active" },
+  {
+    id: "directions",
+    iconModifier: "profile-action-btn__icon--directions",
+    label: "Notes",
+    variant: "default",
+    dividerBefore: true,
+  },
+  { id: "chat", iconModifier: "profile-action-btn__icon--chat", label: "Chat", variant: "default" },
+  {
+    id: "lock",
+    iconModifier: "profile-action-btn__icon--lock",
+    label: "Lock",
+    variant: "purple",
+    dividerBefore: true,
+  },
 ] as const
 
 const navKeys = [
-  { key: "personalInfo", icon: iconPersonalInfo, active: true },
-  { key: "dashboard", icon: iconDashboard },
-  { key: "documents", icon: iconDocuments },
-  { key: "relatedEvents", icon: iconRelatedEvents },
-  { key: "securityCheck", icon: iconSecurityCheck },
-  { key: "familyTree", icon: iconFamilyTree },
+  { key: "personalInfo", iconModifier: "profile-nav__icon-image--personal-info", active: true },
+  { key: "dashboard", iconModifier: "profile-nav__icon-image--dashboard" },
+  { key: "documents", iconModifier: "profile-nav__icon-image--documents" },
+  { key: "relatedEvents", iconModifier: "profile-nav__icon-image--related-events" },
+  { key: "securityCheck", iconModifier: "profile-nav__icon-image--security-check" },
+  { key: "familyTree", iconModifier: "profile-nav__icon-image--family-tree" },
 ] as const
 
 export default function ProfileSidebar() {
@@ -76,11 +77,7 @@ export default function ProfileSidebar() {
                 }`}
                 aria-label={item.label}
               >
-                <span
-                  className="profile-action-btn__icon"
-                  style={{ "--icon-url": `url(${item.icon})` } as CSSProperties}
-                  aria-hidden="true"
-                />
+                <span className={`profile-action-btn__icon ${item.iconModifier}`} aria-hidden="true" />
               </button>
             </Fragment>
           ))}
@@ -124,11 +121,7 @@ export default function ProfileSidebar() {
               className={`profile-nav__link${"active" in item && item.active ? " profile-nav__link--active" : ""}`}
             >
               <span className="profile-nav__icon">
-                <span
-                  className="profile-nav__icon-image"
-                  style={{ "--icon-url": `url(${item.icon})` } as CSSProperties}
-                  aria-hidden="true"
-                />
+                <span className={`profile-nav__icon-image ${item.iconModifier}`} aria-hidden="true" />
               </span>
               {t(`nav.${item.key}`)}
             </button>

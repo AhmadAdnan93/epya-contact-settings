@@ -1,10 +1,7 @@
-import { useState, type CSSProperties } from "react"
+import { useState } from "react"
 import { Form } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
-import iconLock from "../../assets/settings-section/lock.png"
 import iconGlobe from "../../assets/settings-section/globe.png"
-import iconFieldConfig from "../../assets/settings-section/field-config.png"
-import iconViewPreview from "../../assets/settings-section/view-preview.png"
 import previewAvatar from "../../assets/settings-section/preview-avatar.png"
 import saudiFlag from "../../assets/saudi-flag.png"
 import contactAvatar1 from "../../assets/contacts/avatar-1.png"
@@ -88,11 +85,7 @@ export default function ContactSettingsForm() {
         <section className="settings-section">
           <div className="settings-section__row">
             <div className="settings-section__info">
-              <span
-                className="settings-section__icon"
-                style={{ "--icon-url": `url(${iconLock})` } as CSSProperties}
-                aria-hidden="true"
-              />
+              <span className="settings-section__icon settings-section__icon--lock" aria-hidden="true" />
               <div className="settings-section__text">
                 <h2 className="settings-section__title">{t("contactSettings.privacySettings")}</h2>
                 <p className="settings-section__subtitle">{t("contactSettings.privacySettingsHint")}</p>
@@ -118,11 +111,7 @@ export default function ContactSettingsForm() {
         <section className="settings-section">
           <div className="settings-section__row settings-section__row--field-config">
             <div className="settings-section__info">
-              <span
-                className="settings-section__icon"
-                style={{ "--icon-url": `url(${iconFieldConfig})` } as CSSProperties}
-                aria-hidden="true"
-              />
+              <span className="settings-section__icon settings-section__icon--field-config" aria-hidden="true" />
               <div className="settings-section__text">
                 <h2 className="settings-section__title">{t("contactSettings.fieldConfiguration")}</h2>
                 <p className="settings-section__subtitle">
@@ -169,11 +158,7 @@ export default function ContactSettingsForm() {
         <section className="settings-section">
           <div className="settings-section__row settings-section__row--preview">
             <div className="settings-section__info">
-              <span
-                className="settings-section__icon"
-                style={{ "--icon-url": `url(${iconViewPreview})` } as CSSProperties}
-                aria-hidden="true"
-              />
+              <span className="settings-section__icon settings-section__icon--view-preview" aria-hidden="true" />
               <div className="settings-section__text">
                 <h2 className="settings-section__title">{t("contactSettings.viewPreview")}</h2>
                 <p className="settings-section__subtitle">{t("contactSettings.viewPreviewHint")}</p>

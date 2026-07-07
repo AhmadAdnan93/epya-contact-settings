@@ -1,0 +1,142 @@
+// Mask icon sources — paths relative to src/styles/ for Vite asset bundling
+
+@mixin _mask-icon-source($path) {
+  mask-image: url($path);
+  -webkit-mask-image: url($path);
+}
+
+.page-header__icon-btn-image {
+  &--pin {
+    @include _mask-icon-source("../assets/page-header/pin.png");
+  }
+
+  &--history {
+    @include _mask-icon-source("../assets/page-header/history.png");
+  }
+}
+
+.page-header__breadcrumb-icon {
+  &--contacts {
+    @include _mask-icon-source("../assets/breadcrumb-contacts.png");
+  }
+}
+
+.icon-sidebar__icon {
+  &--home {
+    @include _mask-icon-source("../assets/sidebar/home.png");
+  }
+
+  &--dashboard {
+    @include _mask-icon-source("../assets/sidebar/dashboard.png");
+  }
+
+  &--documents {
+    @include _mask-icon-source("../assets/sidebar/documents.png");
+  }
+
+  &--email {
+    @include _mask-icon-source("../assets/sidebar/email.png");
+  }
+
+  &--contacts {
+    @include _mask-icon-source("../assets/sidebar/contacts.png");
+  }
+
+  &--engineer {
+    @include _mask-icon-source("../assets/sidebar/engineer.png");
+  }
+
+  &--purchase-orders {
+    @include _mask-icon-source("../assets/sidebar/purchase-orders.png");
+  }
+}
+
+.profile-action-btn__icon {
+  &--user {
+    @include _mask-icon-source("../assets/profile-actions/user-settings.png");
+  }
+
+  &--settings {
+    @include _mask-icon-source("../assets/profile-actions/settings.png");
+  }
+
+  &--directions {
+    @include _mask-icon-source("../assets/profile-actions/directions.png");
+  }
+
+  &--chat {
+    @include _mask-icon-source("../assets/profile-actions/chat.png");
+  }
+
+  &--lock {
+    @include _mask-icon-source("../assets/profile-actions/lock.png");
+  }
+}
+
+.profile-nav__icon-image {
+  &--personal-info {
+    @include _mask-icon-source("../assets/profile-nav/personal-info.png");
+  }
+
+  &--dashboard {
+    @include _mask-icon-source("../assets/profile-nav/dashboard.png");
+  }
+
+  &--documents {
+    @include _mask-icon-source("../assets/profile-nav/documents.png");
+  }
+
+  &--related-events {
+    @include _mask-icon-source("../assets/profile-nav/related-events.png");
+  }
+
+  &--security-check {
+    @include _mask-icon-source("../assets/profile-nav/security-check.png");
+  }
+
+  &--family-tree {
+    @include _mask-icon-source("../assets/profile-nav/family-tree.png");
+  }
+}
+
+.stat-card__icon-img {
+  &--sms {
+    background-image: url("../assets/stats/sms.png");
+  }
+
+  &--request {
+    background-image: url("../assets/stats/request.png");
+  }
+}
+
+.stat-card__icon-mask {
+  &--total-events {
+    @include _mask-icon-source("../assets/stats/total-events.png");
+  }
+
+  &--email {
+    @include _mask-icon-source("../assets/stats/email.png");
+  }
+
+  &--sms {
+    @include _mask-icon-source("../assets/stats/sms.png");
+  }
+
+  &--request {
+    @include _mask-icon-source("../assets/stats/request.png");
+  }
+}
+
+.settings-section__icon {
+  &--lock {
+    @include _mask-icon-source("../assets/settings-section/lock.png");
+  }
+
+  &--field-config {
+    @include _mask-icon-source("../assets/settings-section/field-config.png");
+  }
+
+  &--view-preview {
+    @include _mask-icon-source("../assets/settings-section/view-preview.png");
+  }
+}

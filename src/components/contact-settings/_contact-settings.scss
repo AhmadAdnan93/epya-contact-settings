@@ -139,6 +139,9 @@
   display: block;
   width: 3rem;
   height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .stat-card__icon-mask {
@@ -146,11 +149,9 @@
   height: 1.5rem;
   display: block;
   background-color: $color-white;
-  mask-image: var(--icon-url);
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: var(--icon-url);
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -230,11 +231,9 @@
   grid-row: 1;
   margin-top: 0.125rem;
   background-color: #47586d;
-  mask-image: var(--icon-url);
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: var(--icon-url);
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -744,7 +743,7 @@
   width: 1.25rem;
   height: auto;
   flex-shrink: 0;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   object-fit: cover;
 }
 

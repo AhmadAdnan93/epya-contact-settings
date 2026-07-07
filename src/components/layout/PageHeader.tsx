@@ -1,10 +1,6 @@
-import { type CSSProperties } from "react"
 import { useTranslation } from "react-i18next"
 import { Button } from "react-bootstrap"
 import profileAvatar from "../../assets/profile-avatar.png"
-import breadcrumbContactsIcon from "../../assets/breadcrumb-contacts.png"
-import pinIcon from "../../assets/page-header/pin.png"
-import historyIcon from "../../assets/page-header/history.png"
 
 export default function PageHeader() {
   const { t } = useTranslation()
@@ -66,11 +62,7 @@ export default function PageHeader() {
 
       <div className="page-header__row">
         <nav className="page-header__breadcrumb" aria-label="Breadcrumb">
-          <span
-            className="page-header__breadcrumb-icon"
-            style={{ "--icon-url": `url(${breadcrumbContactsIcon})` } as CSSProperties}
-            aria-hidden="true"
-          />
+          <span className="page-header__breadcrumb-icon page-header__breadcrumb-icon--contacts" aria-hidden="true" />
           <a className="page-header__breadcrumb-link" href="#contacts">
             {t("contactSettings.breadcrumbContacts")}
           </a>
@@ -98,18 +90,10 @@ export default function PageHeader() {
             {t("contactSettings.follow")}
           </button>
           <button type="button" className="page-header__icon-btn" aria-label="Pin">
-            <span
-              className="page-header__icon-btn-image"
-              style={{ "--icon-url": `url(${pinIcon})` } as CSSProperties}
-              aria-hidden="true"
-            />
+            <span className="page-header__icon-btn-image page-header__icon-btn-image--pin" aria-hidden="true" />
           </button>
           <button type="button" className="page-header__icon-btn" aria-label="History">
-            <span
-              className="page-header__icon-btn-image"
-              style={{ "--icon-url": `url(${historyIcon})` } as CSSProperties}
-              aria-hidden="true"
-            />
+            <span className="page-header__icon-btn-image page-header__icon-btn-image--history" aria-hidden="true" />
           </button>
         </div>
       </div>
