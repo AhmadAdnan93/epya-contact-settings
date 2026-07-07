@@ -1,0 +1,12 @@
+@use "variables" as v;
+@use "base";
+
+$primary: v.$color-primary;
+$border-radius: v.$radius-md;
+$font-family-sans-serif: v.$font-family;
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "../components/layout/layout";
+@import "../components/contact-settings/contact-settings";

@@ -1,0 +1,62 @@
+// Design tokens — aligned with Figma Contact Setting
+$color-primary: #0b5fff;
+$color-primary-dark: #0847c7;
+$color-primary-light: #e8f0ff;
+$color-gold: #b68a35;
+$color-gold-bg: #fdf6e8;
+$color-purple: #7c3aed;
+$color-purple-bg: #f3e8ff;
+$color-teal: #14b8a6;
+$color-teal-bg: #e6faf7;
+
+$color-text: #1a1d21;
+$color-text-muted: #6b7280;
+$color-icon: #47586d;
+$color-header-time-bg: #eef1f5;
+$color-success: #22c55e;
+$color-page-header-bg: #f8fafc;
+$color-page-header-time: #455468;
+$color-page-header-meeting-border: #e2e8f0;
+$color-page-header-meeting-dot: #27ae60;
+$color-page-header-breadcrumb: #334155;
+$color-page-header-breadcrumb-muted: #64748b;
+$color-page-header-meeting-label: #007aff;
+$color-page-header-meeting-title: #1a202c;
+$color-page-header-create: #0086ff;
+$gradient-page-header-create: linear-gradient(
+  92deg,
+  rgba(27, 203, 242, 0) -15.99%,
+  rgba(27, 203, 242, 0.63) 106.89%
+);
+$color-border: #e5e7eb;
+$color-border-primary: #c7d2e0;
+$color-bg: #f4f6f9;
+$color-white: #ffffff;
+$shadow-xs: 0 1px 2px 0 rgba(146, 163, 182, 0.05);
+$shadow-xl:
+  0 20px 24px -4px rgba(146, 163, 182, 0.08),
+  0 8px 8px -4px rgba(146, 163, 182, 0.03),
+  0 3px 3px -1.5px rgba(146, 163, 182, 0.04);
+$profile-surface-bg:
+  linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 134, 255, 0.08) 100%),
+  linear-gradient(0deg, #fff 0%, #fff 100%),
+  rgba(255, 255, 255, 0.8);
+
+$gradient-silver: linear-gradient(1deg, #fff -12.07%, #e1e3e5 104.57%);
+$gradient-profile-score: linear-gradient(90deg, #0086ff 0%, #0086ff 41.83%, #1bcbf2 100%);
+
+$radius-sm: 0.5rem;
+$radius-md: 0.75rem;
+$radius-lg: 1rem;
+$radius-xl: 1.25rem;
+$radius-200: 0.75rem;
+$radius-2xl: 1rem;
+$radius-xl-token: 0.75rem;
+
+$color-brand-secondary: #1bcbf2;
+
+$sidebar-icon-width: 4.5rem;
+$topbar-height: 3.5rem;
+
+$font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+$font-family-ar: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
