@@ -3,7 +3,41 @@
 Front-end assignment: a responsive **Contact Setting** page implemented from the [Figma design](https://www.figma.com/design/m71i8XL0VoFfqpUZk2nCbo/Test-front-end?node-id=1-8738&m=dev).
 
 **Repository:** [github.com/AhmadAdnan93/epya-contact-settings](https://github.com/AhmadAdnan93/epya-contact-settings)  
-**Live demo:** Deploy using the [Deployment](#deployment-live-demo) steps below (Vercel / Netlify).
+**Live demo:** [epya-contact-settings-two.vercel.app](https://epya-contact-settings-two.vercel.app/)
+
+---
+
+## Framework & architecture
+
+### React (UI framework)
+
+- **React 19** with **TypeScript** for type-safe components
+- **Vite 8** as the build tool and dev server
+- Component-based structure with a clear separation of concerns:
+  - `pages/` — page-level composition (`ContactSettingsPage`)
+  - `components/layout/` — app shell (header, sidebars)
+  - `components/contact-settings/` — contact settings feature (header, form, table)
+
+### Styling structure
+
+Styling is **SCSS-only** (no inline styles). The approach combines global design tokens, Bootstrap utilities, and component-scoped BEM-style class names.
+
+| Layer | Location | Purpose |
+| --- | --- | --- |
+| **Design tokens** | `src/styles/_variables.scss` | Colors, spacing, radii, shadows aligned with Figma |
+| **Global base** | `src/styles/_base.scss` | Resets and document-level defaults |
+| **Entry point** | `src/styles/main.scss` | Imports Bootstrap, icons, and component stylesheets |
+| **Layout styles** | `src/components/layout/_layout.scss` | Page header, sidebars, profile card |
+| **Feature styles** | `src/components/contact-settings/_contact-settings.scss` | Stats, settings sections, preview cards, contacts table |
+
+**Bootstrap 5** + **React Bootstrap** are used for form controls (switches, checkboxes, buttons) and the base grid/utilities. Custom SCSS overrides and extends Bootstrap to match the Figma design.
+
+**Icons:** Bootstrap Icons for UI actions, plus custom PNG assets loaded via CSS mask pattern (`settings-section__icon`, etc.).
+
+### Internationalization
+
+- **react-i18next** with locale files in `src/i18n/locales/`
+- English (LTR) and Arabic (RTL) with a floating language switcher
 
 ---
 
@@ -157,7 +191,9 @@ The project is initialized with git and a structured commit history. To publish 
 
 ## Deployment (live demo)
 
-This project is a static Vite SPA. Deploy the `dist/` folder after `npm run build`.
+**Live URL:** [https://epya-contact-settings-two.vercel.app/](https://epya-contact-settings-two.vercel.app/)
+
+This project is a static Vite SPA deployed on **Vercel**. The `dist/` folder is produced by `npm run build`.
 
 ### Vercel (recommended)
 
